@@ -1,5 +1,6 @@
 package com.github.badoualy.telegram.api
 
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.slf4j.MarkerFactory
 import java.util.*
@@ -29,7 +30,7 @@ class TelegramClientPool private constructor(name: String) {
      */
     @JvmOverloads
     fun put(id: Long, client: TelegramClient, listener: OnClientTimeoutListener?, expiresIn: Long = DEFAULT_EXPIRATION_DELAY) {
-        logger.debug(marker, "Adding client with id $id")
+        logger?.debug(marker, "Adding client with id $id")
         synchronized(this) {
             // Already have a client with this id, close the new one and reset timer
             expireMap.put(id, System.currentTimeMillis() + expiresIn)
@@ -83,7 +84,7 @@ class TelegramClientPool private constructor(name: String) {
                     if (expireMap.getOrDefault(id, 0) <= System.currentTimeMillis()) {
                         val client = getAndRemove(id)
                         if (client != null) {
-                            logger.info(marker, "$id client timeout")
+                            logger?.info(marker, "$id client timeout")
                             client.close(false)
                             true
                         } else false
@@ -102,7 +103,7 @@ class TelegramClientPool private constructor(name: String) {
     fun getClients() = map.values
 
     companion object {
-        private val logger = LoggerFactory.getLogger(TelegramClientPool::class.java)
+        var logger: Logger? = null
 
         @JvmField
         val DEFAULT_POOL = TelegramClientPool("DefaultPool")

@@ -3,17 +3,18 @@ package com.github.badoualy.telegram.api
 import com.github.badoualy.telegram.mtproto.MTProtoHandler
 import com.github.badoualy.telegram.mtproto.model.DataCenter
 import com.github.badoualy.telegram.mtproto.secure.RandomUtils
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 object Kotlogram {
 
-    private val logger = LoggerFactory.getLogger(Kotlogram::class.java)!!
+    var logger: Logger? = null
 
     @JvmField
     val API_LAYER = 66
 
     init {
-        logger.info("""
+        logger?.info("""
          __  ___   ______   .___________. __        ______     _______ .______          ___      .___  ___.
         |  |/  /  /  __  \  |           ||  |      /  __  \   /  _____||   _  \        /   \     |   \/   |
         |  '  /  |  |  |  | `---|  |----`|  |     |  |  |  | |  |  __  |  |_)  |      /  ^  \    |  \  /  |
@@ -33,11 +34,11 @@ object Kotlogram {
 
     @JvmStatic
     fun shutdown() {
-        logger.warn("==================== SHUTTING DOWN ====================")
+        logger?.warn("==================== SHUTTING DOWN ====================")
         TelegramClientPool.DEFAULT_POOL.shutdown()
         TelegramClientPool.DOWNLOADER_POOL.shutdown()
         MTProtoHandler.shutdown()
-        logger.warn("==================== SHUT DOWN DONE ====================")
+        logger?.warn("==================== SHUT DOWN DONE ====================")
     }
 
     @JvmField val PROD_DC1 = DataCenter("149.154.175.50", 443)

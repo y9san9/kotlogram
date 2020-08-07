@@ -1,6 +1,7 @@
 package com.github.badoualy.telegram.mtproto.transport
 
 import com.github.badoualy.telegram.tl.ByteBufferUtils.*
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.slf4j.MarkerFactory
 import java.io.IOException
@@ -47,14 +48,14 @@ internal class MTProtoTcpConnection
 
                 if (abridgedProtocol) {
                     // @see https://core.telegram.org/mtproto/samples-auth_key
-                    logger.info(marker, "Using abridged protocol")
+                    logger?.info(marker, "Using abridged protocol")
                     socketChannel.write(ByteBuffer.wrap(byteArrayOf(0xef.toByte())))
                 }
-                logger.info(marker, "Connected to $ip:$port")
+                logger?.info(marker, "Connected to $ip:$port")
 
                 break
             } catch(e: Exception) {
-                logger.error(marker, "Failed to connect", e)
+                logger?.error(marker, "Failed to connect", e)
                 try {
                     socketChannel.close()
                 } catch (e: Exception) {
@@ -79,7 +80,7 @@ internal class MTProtoTcpConnection
         if (length == 0x7f)
             length = readInt24(readBytes(3, msgLengthBuffer))
 
-        logger.debug(marker, "About to read a message of length ${length * 4}")
+        logger?.debug(marker, "About to read a message of length ${length * 4}")
         val buffer = readBytes(length * 4)
 
         // TODO: fix to return ByteBuffer
@@ -138,7 +139,7 @@ internal class MTProtoTcpConnection
 
     @Throws(IOException::class)
     override fun close() {
-        logger.debug(marker, "Closing connection")
+        logger?.debug(marker, "Closing connection")
         socketChannel.close()
     }
 
@@ -168,6 +169,6 @@ internal class MTProtoTcpConnection
     }
 
     companion object {
-        private val logger = LoggerFactory.getLogger(MTProtoTcpConnection::class.java)
+        var logger: Logger? = null
     }
 }
