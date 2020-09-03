@@ -79,7 +79,7 @@ public class TLRequestMessagesGetMessagesViews extends TLMethod<TLIntVector> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -93,7 +93,7 @@ public class TLInputBotInlineMessageMediaContact extends TLAbsInputBotInlineMess
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

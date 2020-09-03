@@ -19,7 +19,7 @@ public class TLContactLinkUnknown extends TLAbsContactLink {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

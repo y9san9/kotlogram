@@ -123,7 +123,7 @@ public class TLRequestContactsGetTopPeers extends TLMethod<TLAbsTopPeers> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

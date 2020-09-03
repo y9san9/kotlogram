@@ -19,7 +19,7 @@ public class TLInputPrivacyKeyStatusTimestamp extends TLAbsInputPrivacyKey {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

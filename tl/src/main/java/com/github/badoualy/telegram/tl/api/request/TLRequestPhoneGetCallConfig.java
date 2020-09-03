@@ -44,7 +44,7 @@ public class TLRequestPhoneGetCallConfig extends TLMethod<TLDataJSON> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

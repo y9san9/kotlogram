@@ -83,7 +83,7 @@ public class TLRequestAccountGetTmpPassword extends TLMethod<TLTmpPassword> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

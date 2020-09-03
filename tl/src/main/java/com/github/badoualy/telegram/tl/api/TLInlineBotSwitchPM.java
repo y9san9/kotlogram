@@ -61,7 +61,7 @@ public class TLInlineBotSwitchPM extends TLObject {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

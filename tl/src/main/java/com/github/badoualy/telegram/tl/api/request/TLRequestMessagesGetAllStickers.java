@@ -73,7 +73,7 @@ public class TLRequestMessagesGetAllStickers extends TLMethod<TLAbsAllStickers> 
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

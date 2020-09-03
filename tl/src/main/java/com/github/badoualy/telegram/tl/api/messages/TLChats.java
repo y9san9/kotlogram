@@ -53,7 +53,7 @@ public class TLChats extends TLAbsChats {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

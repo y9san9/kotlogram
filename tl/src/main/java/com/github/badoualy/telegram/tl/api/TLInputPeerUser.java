@@ -63,7 +63,7 @@ public class TLInputPeerUser extends TLAbsInputPeer {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

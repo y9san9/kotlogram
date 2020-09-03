@@ -72,7 +72,7 @@ public class TLRequestPhotosUploadProfilePhoto extends TLMethod<TLPhoto> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -19,7 +19,7 @@ public class TLInputNotifyAll extends TLAbsInputNotifyPeer {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

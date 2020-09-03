@@ -63,7 +63,7 @@ public class TLMessages extends TLAbsMessages {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -69,7 +69,7 @@ public class TLFileLocation extends TLAbsFileLocation {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

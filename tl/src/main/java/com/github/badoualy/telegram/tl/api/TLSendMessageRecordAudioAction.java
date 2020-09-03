@@ -19,7 +19,7 @@ public class TLSendMessageRecordAudioAction extends TLAbsSendMessageAction {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

@@ -111,7 +111,7 @@ public class TLDocument extends TLAbsDocument {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

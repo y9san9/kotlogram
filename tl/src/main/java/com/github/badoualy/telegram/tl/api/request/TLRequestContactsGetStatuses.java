@@ -35,7 +35,7 @@ public class TLRequestContactsGetStatuses extends TLMethod<TLVector<TLContactSta
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

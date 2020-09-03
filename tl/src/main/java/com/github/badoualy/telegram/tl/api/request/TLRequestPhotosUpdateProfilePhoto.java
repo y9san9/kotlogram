@@ -72,7 +72,7 @@ public class TLRequestPhotosUpdateProfilePhoto extends TLMethod<TLAbsUserProfile
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

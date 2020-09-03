@@ -19,7 +19,7 @@ public class TLFeaturedStickersNotModified extends TLAbsFeaturedStickers {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

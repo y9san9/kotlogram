@@ -72,7 +72,7 @@ public class TLInputFile extends TLAbsInputFile {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

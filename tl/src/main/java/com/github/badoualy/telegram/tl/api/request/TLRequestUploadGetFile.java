@@ -87,7 +87,7 @@ public class TLRequestUploadGetFile extends TLMethod<TLAbsFile> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

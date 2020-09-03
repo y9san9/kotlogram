@@ -68,7 +68,7 @@ public class TLLink extends TLObject {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

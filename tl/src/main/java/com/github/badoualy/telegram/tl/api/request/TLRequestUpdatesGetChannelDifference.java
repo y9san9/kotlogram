@@ -112,7 +112,7 @@ public class TLRequestUpdatesGetChannelDifference extends TLMethod<TLAbsChannelD
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

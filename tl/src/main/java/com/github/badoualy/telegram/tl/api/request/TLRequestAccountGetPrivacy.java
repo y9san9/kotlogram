@@ -72,7 +72,7 @@ public class TLRequestAccountGetPrivacy extends TLMethod<TLPrivacyRules> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -106,7 +106,7 @@ public class TLPhoneCallDiscarded extends TLAbsPhoneCall {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

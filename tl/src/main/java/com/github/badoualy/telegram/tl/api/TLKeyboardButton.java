@@ -52,7 +52,7 @@ public class TLKeyboardButton extends TLAbsKeyboardButton {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

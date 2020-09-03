@@ -121,7 +121,7 @@ public class TLRequestAuthSendCode extends TLMethod<TLSentCode> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

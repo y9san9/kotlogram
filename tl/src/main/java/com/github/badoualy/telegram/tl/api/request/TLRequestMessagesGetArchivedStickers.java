@@ -100,7 +100,7 @@ public class TLRequestMessagesGetArchivedStickers extends TLMethod<TLArchivedSti
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

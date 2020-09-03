@@ -62,7 +62,7 @@ public class TLContacts extends TLAbsContacts {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

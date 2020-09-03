@@ -60,7 +60,7 @@ public class TLDifferenceEmpty extends TLAbsDifference {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

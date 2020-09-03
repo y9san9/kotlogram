@@ -54,7 +54,7 @@ public class TLPeerChannel extends TLAbsPeer {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

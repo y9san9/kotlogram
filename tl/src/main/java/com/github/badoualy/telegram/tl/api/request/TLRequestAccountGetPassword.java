@@ -44,7 +44,7 @@ public class TLRequestAccountGetPassword extends TLMethod<TLAbsPassword> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

@@ -19,7 +19,7 @@ public class TLInputReportReasonSpam extends TLAbsReportReason {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

@@ -78,7 +78,7 @@ public class TLInputBotInlineMessageMediaGeo extends TLAbsInputBotInlineMessage 
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

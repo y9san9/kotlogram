@@ -19,7 +19,7 @@ public class TLInputEncryptedFileEmpty extends TLAbsInputEncryptedFile {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

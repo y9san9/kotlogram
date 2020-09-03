@@ -79,7 +79,7 @@ public class TLRequestMessagesGetDhConfig extends TLMethod<TLAbsDhConfig> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

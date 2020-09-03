@@ -66,7 +66,7 @@ public class TLInputMediaContact extends TLAbsInputMedia {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

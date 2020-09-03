@@ -54,7 +54,7 @@ public class TLPaymentVerficationNeeded extends TLAbsPaymentResult {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

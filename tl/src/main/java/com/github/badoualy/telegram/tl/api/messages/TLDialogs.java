@@ -68,7 +68,7 @@ public class TLDialogs extends TLAbsDialogs {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

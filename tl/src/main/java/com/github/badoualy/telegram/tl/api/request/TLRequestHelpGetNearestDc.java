@@ -44,7 +44,7 @@ public class TLRequestHelpGetNearestDc extends TLMethod<TLNearestDc> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

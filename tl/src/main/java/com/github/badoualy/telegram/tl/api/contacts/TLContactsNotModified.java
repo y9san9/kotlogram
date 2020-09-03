@@ -19,7 +19,7 @@ public class TLContactsNotModified extends TLAbsContacts {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

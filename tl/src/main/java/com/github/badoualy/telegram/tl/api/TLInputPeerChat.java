@@ -54,7 +54,7 @@ public class TLInputPeerChat extends TLAbsInputPeer {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

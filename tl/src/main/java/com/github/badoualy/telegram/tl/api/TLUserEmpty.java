@@ -52,7 +52,7 @@ public class TLUserEmpty extends TLAbsUser {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

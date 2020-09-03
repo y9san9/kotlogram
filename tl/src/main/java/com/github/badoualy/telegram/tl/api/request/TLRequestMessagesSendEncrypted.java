@@ -91,7 +91,7 @@ public class TLRequestMessagesSendEncrypted extends TLMethod<TLAbsSentEncryptedM
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

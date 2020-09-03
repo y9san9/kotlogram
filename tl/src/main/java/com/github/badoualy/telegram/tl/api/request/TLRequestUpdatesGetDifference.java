@@ -111,7 +111,7 @@ public class TLRequestUpdatesGetDifference extends TLMethod<TLAbsDifference> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

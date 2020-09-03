@@ -52,7 +52,7 @@ public class TLMessageEmpty extends TLAbsMessage {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

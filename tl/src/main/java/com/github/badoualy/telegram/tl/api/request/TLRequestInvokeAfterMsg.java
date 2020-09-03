@@ -70,7 +70,7 @@ public class TLRequestInvokeAfterMsg<T extends TLObject> extends TLMethod<T> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 
