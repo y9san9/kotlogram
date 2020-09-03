@@ -26,7 +26,7 @@ public abstract class TLObject implements Serializable {
     /**
      * @return the constructor id represented by this class
      */
-    public abstract int getConstructorId();
+    public abstract long getConstructorId();
 
     /**
      * Serialize object to byte array

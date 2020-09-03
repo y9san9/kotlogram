@@ -54,7 +54,7 @@ public abstract class TLBool extends TLObject {
         }
 
         @Override
-        public int getConstructorId() {
+        public long getConstructorId() {
             return CONSTRUCTOR_ID;
         }
 
@@ -73,7 +73,7 @@ public abstract class TLBool extends TLObject {
         }
 
         @Override
-        public int getConstructorId() {
+        public long getConstructorId() {
             return CONSTRUCTOR_ID;
         }
 

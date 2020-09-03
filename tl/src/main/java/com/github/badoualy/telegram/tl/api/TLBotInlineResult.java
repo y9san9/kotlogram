@@ -193,7 +193,7 @@ public class TLBotInlineResult extends TLAbsBotInlineResult {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

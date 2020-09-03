@@ -72,7 +72,7 @@ public class TLRequestUsersGetFullUser extends TLMethod<TLUserFull> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

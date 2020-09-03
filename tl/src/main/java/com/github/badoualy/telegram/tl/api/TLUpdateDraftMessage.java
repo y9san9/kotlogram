@@ -59,7 +59,7 @@ public class TLUpdateDraftMessage extends TLAbsUpdate {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

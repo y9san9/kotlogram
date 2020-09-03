@@ -91,7 +91,7 @@ public class TLDifferenceSlice extends TLAbsDifference {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

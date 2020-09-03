@@ -99,7 +99,7 @@ public class TLRequestMessagesDeleteHistory extends TLMethod<TLAffectedHistory> 
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

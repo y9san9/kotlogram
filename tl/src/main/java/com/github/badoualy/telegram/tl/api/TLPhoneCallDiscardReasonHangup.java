@@ -19,7 +19,7 @@ public class TLPhoneCallDiscardReasonHangup extends TLAbsPhoneCallDiscardReason 
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

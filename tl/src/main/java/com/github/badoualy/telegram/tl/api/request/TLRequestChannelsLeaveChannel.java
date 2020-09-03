@@ -72,7 +72,7 @@ public class TLRequestChannelsLeaveChannel extends TLMethod<TLAbsUpdates> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -62,7 +62,7 @@ public class TLPageBlockAuthorDate extends TLAbsPageBlock {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

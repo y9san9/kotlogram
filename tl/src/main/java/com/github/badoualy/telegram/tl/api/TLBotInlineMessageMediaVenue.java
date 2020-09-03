@@ -105,7 +105,7 @@ public class TLBotInlineMessageMediaVenue extends TLAbsBotInlineMessage {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

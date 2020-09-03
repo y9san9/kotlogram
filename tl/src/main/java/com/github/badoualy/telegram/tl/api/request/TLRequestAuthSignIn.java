@@ -85,7 +85,7 @@ public class TLRequestAuthSignIn extends TLMethod<TLAuthorization> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

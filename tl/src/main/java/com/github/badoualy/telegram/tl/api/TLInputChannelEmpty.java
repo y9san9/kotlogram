@@ -19,7 +19,7 @@ public class TLInputChannelEmpty extends TLAbsInputChannel {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -44,7 +44,7 @@ public class TLRequestHelpGetInviteText extends TLMethod<TLInviteText> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

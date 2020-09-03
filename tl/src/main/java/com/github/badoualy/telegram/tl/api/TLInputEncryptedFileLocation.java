@@ -60,7 +60,7 @@ public class TLInputEncryptedFileLocation extends TLAbsInputFileLocation {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

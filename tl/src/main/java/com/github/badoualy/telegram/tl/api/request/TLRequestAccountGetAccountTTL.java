@@ -44,7 +44,7 @@ public class TLRequestAccountGetAccountTTL extends TLMethod<TLAccountDaysTTL> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

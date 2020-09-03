@@ -8,7 +8,7 @@ import java.io.InputStream
 import java.io.OutputStream
 
 class TLRequestMessagesSendMultiMedia : TLMethod<TLAbsUpdates>() {
-    override fun getConstructorId() = 0xcc0110c
+    override fun getConstructorId() = 0xcc0110cb
 
     override fun serializeBody(stream: OutputStream?) {
         

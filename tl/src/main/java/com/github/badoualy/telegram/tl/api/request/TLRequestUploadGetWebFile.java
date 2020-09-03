@@ -87,7 +87,7 @@ public class TLRequestUploadGetWebFile extends TLMethod<TLWebFile> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

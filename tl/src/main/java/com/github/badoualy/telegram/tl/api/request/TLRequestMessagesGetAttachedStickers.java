@@ -64,7 +64,7 @@ public class TLRequestMessagesGetAttachedStickers extends TLMethod<TLVector<TLAb
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

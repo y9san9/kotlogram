@@ -78,7 +78,7 @@ public class TLAppUpdate extends TLAbsAppUpdate {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

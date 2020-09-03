@@ -61,7 +61,7 @@ public class TLChatForbidden extends TLAbsChat {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 
