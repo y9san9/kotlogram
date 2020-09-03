@@ -54,7 +54,7 @@ public class TLUserStatusOnline extends TLAbsUserStatus {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

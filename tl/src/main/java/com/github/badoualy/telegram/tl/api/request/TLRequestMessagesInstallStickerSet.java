@@ -81,7 +81,7 @@ public class TLRequestMessagesInstallStickerSet extends TLMethod<TLAbsStickerSet
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

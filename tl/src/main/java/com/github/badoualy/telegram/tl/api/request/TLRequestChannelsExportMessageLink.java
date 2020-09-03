@@ -81,7 +81,7 @@ public class TLRequestChannelsExportMessageLink extends TLMethod<TLExportedMessa
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

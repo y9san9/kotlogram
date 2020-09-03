@@ -72,7 +72,7 @@ public class TLRequestChannelsExportInvite extends TLMethod<TLAbsExportedChatInv
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

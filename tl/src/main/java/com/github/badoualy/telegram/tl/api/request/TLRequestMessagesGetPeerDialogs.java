@@ -74,7 +74,7 @@ public class TLRequestMessagesGetPeerDialogs extends TLMethod<TLPeerDialogs> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

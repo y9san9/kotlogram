@@ -94,7 +94,7 @@ public class TLRequestAuthImportBotAuthorization extends TLMethod<TLAuthorizatio
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

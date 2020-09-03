@@ -60,7 +60,7 @@ public class TLNoPassword extends TLAbsPassword {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -64,7 +64,7 @@ public class TLInputBotInlineResultGame extends TLAbsInputBotInlineResult {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

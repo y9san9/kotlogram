@@ -63,7 +63,7 @@ public class TLRequestMessagesReceivedQueue extends TLMethod<TLLongVector> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

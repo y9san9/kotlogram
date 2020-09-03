@@ -79,7 +79,7 @@ public class TLEncryptedChatWaiting extends TLAbsEncryptedChat {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

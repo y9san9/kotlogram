@@ -62,7 +62,7 @@ public class TLMessageEntityMentionName extends TLAbsMessageEntity {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

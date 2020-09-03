@@ -54,7 +54,7 @@ public class TLWebPageEmpty extends TLAbsWebPage {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

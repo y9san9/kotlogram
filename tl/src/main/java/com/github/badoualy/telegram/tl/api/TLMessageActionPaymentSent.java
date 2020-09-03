@@ -63,7 +63,7 @@ public class TLMessageActionPaymentSent extends TLAbsMessageAction {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

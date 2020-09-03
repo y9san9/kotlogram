@@ -124,7 +124,7 @@ public class TLStickerSet extends TLObject {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

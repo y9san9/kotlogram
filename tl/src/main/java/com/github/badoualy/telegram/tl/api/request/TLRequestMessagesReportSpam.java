@@ -72,7 +72,7 @@ public class TLRequestMessagesReportSpam extends TLMethod<TLBool> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

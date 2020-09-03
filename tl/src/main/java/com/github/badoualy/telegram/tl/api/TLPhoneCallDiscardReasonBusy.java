@@ -19,7 +19,7 @@ public class TLPhoneCallDiscardReasonBusy extends TLAbsPhoneCallDiscardReason {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

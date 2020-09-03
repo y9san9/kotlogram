@@ -75,7 +75,7 @@ public class TLMessageMediaContact extends TLAbsMessageMedia {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

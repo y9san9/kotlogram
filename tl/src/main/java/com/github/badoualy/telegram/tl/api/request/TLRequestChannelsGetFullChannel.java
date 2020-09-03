@@ -72,7 +72,7 @@ public class TLRequestChannelsGetFullChannel extends TLMethod<TLChatFull> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

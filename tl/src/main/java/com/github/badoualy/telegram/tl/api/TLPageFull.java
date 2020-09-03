@@ -60,7 +60,7 @@ public class TLPageFull extends TLAbsPage {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

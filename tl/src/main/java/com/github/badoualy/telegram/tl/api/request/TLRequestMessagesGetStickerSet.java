@@ -72,7 +72,7 @@ public class TLRequestMessagesGetStickerSet extends TLMethod<TLStickerSet> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

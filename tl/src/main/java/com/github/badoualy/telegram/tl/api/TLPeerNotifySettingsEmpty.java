@@ -19,7 +19,7 @@ public class TLPeerNotifySettingsEmpty extends TLAbsPeerNotifySettings {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -121,7 +121,7 @@ public class TLUpdateShortSentMessage extends TLAbsUpdates {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

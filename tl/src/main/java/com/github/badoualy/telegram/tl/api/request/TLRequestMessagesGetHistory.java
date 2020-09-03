@@ -111,7 +111,7 @@ public class TLRequestMessagesGetHistory extends TLMethod<TLAbsMessages> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

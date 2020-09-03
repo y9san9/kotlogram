@@ -58,7 +58,7 @@ public class TLPhotos extends TLAbsPhotos {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -44,7 +44,7 @@ public class TLRequestChannelsGetAdminedPublicChannels extends TLMethod<TLAbsCha
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

@@ -52,7 +52,7 @@ public class TLSentEncryptedMessage extends TLAbsSentEncryptedMessage {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

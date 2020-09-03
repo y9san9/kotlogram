@@ -59,7 +59,7 @@ public class TLChatPhoto extends TLAbsChatPhoto {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

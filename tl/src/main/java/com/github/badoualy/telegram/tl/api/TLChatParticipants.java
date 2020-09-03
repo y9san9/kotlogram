@@ -67,7 +67,7 @@ public class TLChatParticipants extends TLAbsChatParticipants {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

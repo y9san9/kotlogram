@@ -69,7 +69,7 @@ public class TLInputDocumentFileLocation extends TLAbsInputFileLocation {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

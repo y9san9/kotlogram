@@ -19,7 +19,7 @@ public class TLEncryptedFileEmpty extends TLAbsEncryptedFile {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

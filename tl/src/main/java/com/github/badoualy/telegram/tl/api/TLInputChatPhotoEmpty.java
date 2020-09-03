@@ -19,7 +19,7 @@ public class TLInputChatPhotoEmpty extends TLAbsInputChatPhoto {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

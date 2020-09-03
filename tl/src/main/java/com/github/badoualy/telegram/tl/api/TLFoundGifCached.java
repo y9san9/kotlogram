@@ -66,7 +66,7 @@ public class TLFoundGifCached extends TLAbsFoundGif {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -83,7 +83,7 @@ public class TLRequestContactsImportContacts extends TLMethod<TLImportedContacts
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

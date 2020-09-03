@@ -44,7 +44,7 @@ public class TLRequestAccountGetAuthorizations extends TLMethod<TLAuthorizations
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

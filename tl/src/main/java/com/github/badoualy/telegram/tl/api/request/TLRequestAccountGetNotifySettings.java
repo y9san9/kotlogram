@@ -72,7 +72,7 @@ public class TLRequestAccountGetNotifySettings extends TLMethod<TLAbsPeerNotifyS
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

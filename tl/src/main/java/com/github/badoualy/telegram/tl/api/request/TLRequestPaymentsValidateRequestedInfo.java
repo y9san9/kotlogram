@@ -99,7 +99,7 @@ public class TLRequestPaymentsValidateRequestedInfo extends TLMethod<TLValidated
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

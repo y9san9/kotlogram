@@ -89,7 +89,7 @@ public class TLRequestUploadGetCdnFile extends TLMethod<TLAbsCdnFile> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

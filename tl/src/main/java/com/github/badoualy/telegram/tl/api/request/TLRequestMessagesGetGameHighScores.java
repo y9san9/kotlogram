@@ -88,7 +88,7 @@ public class TLRequestMessagesGetGameHighScores extends TLMethod<TLHighScores> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

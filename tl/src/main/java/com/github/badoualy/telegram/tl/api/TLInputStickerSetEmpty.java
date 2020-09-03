@@ -19,7 +19,7 @@ public class TLInputStickerSetEmpty extends TLAbsInputStickerSet {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

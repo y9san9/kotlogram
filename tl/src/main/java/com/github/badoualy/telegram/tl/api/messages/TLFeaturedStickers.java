@@ -72,7 +72,7 @@ public class TLFeaturedStickers extends TLAbsFeaturedStickers {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

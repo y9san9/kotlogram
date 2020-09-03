@@ -199,7 +199,7 @@ public class TLChannel extends TLAbsChat {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

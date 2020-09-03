@@ -98,7 +98,7 @@ public class TLRequestPhoneConfirmCall extends TLMethod<TLPhoneCall> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

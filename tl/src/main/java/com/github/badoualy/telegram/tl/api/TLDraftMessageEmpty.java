@@ -19,7 +19,7 @@ public class TLDraftMessageEmpty extends TLAbsDraftMessage {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

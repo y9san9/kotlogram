@@ -73,7 +73,7 @@ public class TLRequestMessagesReadMessageContents extends TLMethod<TLAffectedMes
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

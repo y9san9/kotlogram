@@ -76,7 +76,7 @@ public class TLFileCdnRedirect extends TLAbsFile {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

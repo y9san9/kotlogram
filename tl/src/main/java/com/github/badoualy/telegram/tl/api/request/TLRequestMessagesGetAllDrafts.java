@@ -44,7 +44,7 @@ public class TLRequestMessagesGetAllDrafts extends TLMethod<TLAbsUpdates> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

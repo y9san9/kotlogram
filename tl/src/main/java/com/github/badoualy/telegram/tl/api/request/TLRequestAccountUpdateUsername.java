@@ -73,7 +73,7 @@ public class TLRequestAccountUpdateUsername extends TLMethod<TLAbsUser> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

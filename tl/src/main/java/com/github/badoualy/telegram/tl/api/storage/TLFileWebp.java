@@ -19,7 +19,7 @@ public class TLFileWebp extends TLAbsFileType {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

@@ -87,7 +87,7 @@ public class TLRequestMessagesGetCommonChats extends TLMethod<TLAbsChats> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

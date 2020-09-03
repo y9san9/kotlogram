@@ -86,7 +86,7 @@ public class TLRequestChannelsEditAdmin extends TLMethod<TLAbsUpdates> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

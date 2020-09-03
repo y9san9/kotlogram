@@ -54,7 +54,7 @@ public class TLChatInviteExported extends TLAbsExportedChatInvite {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 
