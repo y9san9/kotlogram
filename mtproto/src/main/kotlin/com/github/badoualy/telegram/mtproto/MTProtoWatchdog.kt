@@ -1,7 +1,9 @@
 package com.github.badoualy.telegram.mtproto
 
+
 import com.github.badoualy.telegram.mtproto.transport.MTProtoConnection
 import com.github.badoualy.telegram.mtproto.util.NamedThreadFactory
+import com.y9san9.kotlogram.internal.KotlogramLogger
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import rx.Observable
@@ -18,7 +20,8 @@ import java.util.concurrent.Executors
  */
 internal object MTProtoWatchdog : Runnable {
 
-    var logger: Logger? = null
+    private var loggerSource = LoggerFactory.getLogger(MTProtoWatchdog::class.java)
+    val logger get() = if(KotlogramLogger.enabled) loggerSource else null
 
     private val SELECT_TIMEOUT_DELAY = 10 * 1000L // 10 seconds
 

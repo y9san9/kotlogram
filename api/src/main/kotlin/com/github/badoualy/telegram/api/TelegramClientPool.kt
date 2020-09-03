@@ -1,5 +1,6 @@
 package com.github.badoualy.telegram.api
 
+import com.y9san9.kotlogram.internal.KotlogramLogger
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.slf4j.MarkerFactory
@@ -103,7 +104,8 @@ class TelegramClientPool private constructor(name: String) {
     fun getClients() = map.values
 
     companion object {
-        var logger: Logger? = null
+        private var loggerSource = LoggerFactory.getLogger(Kotlogram::class.java)
+        val logger get() = if(KotlogramLogger.enabled) loggerSource else null
 
         @JvmField
         val DEFAULT_POOL = TelegramClientPool("DefaultPool")

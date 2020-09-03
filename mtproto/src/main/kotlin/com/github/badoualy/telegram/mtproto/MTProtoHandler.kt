@@ -19,6 +19,7 @@ import com.github.badoualy.telegram.tl.core.TLMethod
 import com.github.badoualy.telegram.tl.core.TLObject
 import com.github.badoualy.telegram.tl.exception.DeserializationException
 import com.github.badoualy.telegram.tl.exception.RpcErrorException
+import com.y9san9.kotlogram.internal.KotlogramLogger
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import rx.Observable
@@ -646,7 +647,8 @@ class MTProtoHandler {
 
     companion object {
 
-        var logger: Logger? = null
+        private var loggerSource = LoggerFactory.getLogger(MTProtoHandler::class.java)
+        val logger get() = if(KotlogramLogger.enabled) loggerSource else null
 
         private val mtProtoContext = MTProtoContext
         private val apiContext = TLApiContext.getInstance()

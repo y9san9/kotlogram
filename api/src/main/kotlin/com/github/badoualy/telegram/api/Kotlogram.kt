@@ -3,12 +3,13 @@ package com.github.badoualy.telegram.api
 import com.github.badoualy.telegram.mtproto.MTProtoHandler
 import com.github.badoualy.telegram.mtproto.model.DataCenter
 import com.github.badoualy.telegram.mtproto.secure.RandomUtils
+import com.y9san9.kotlogram.internal.KotlogramLogger
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 object Kotlogram {
-
-    var logger: Logger? = null
+    private var loggerSource = LoggerFactory.getLogger(Kotlogram::class.java)
+    private val logger get() = if(KotlogramLogger.enabled) loggerSource else null
 
     @JvmField
     val API_LAYER = 66

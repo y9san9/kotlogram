@@ -1,6 +1,7 @@
 package com.github.badoualy.telegram.mtproto.transport
 
 import com.github.badoualy.telegram.tl.ByteBufferUtils.*
+import com.y9san9.kotlogram.internal.KotlogramLogger
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.slf4j.MarkerFactory
@@ -169,6 +170,7 @@ internal class MTProtoTcpConnection
     }
 
     companion object {
-        var logger: Logger? = null
+        private var loggerSource = LoggerFactory.getLogger(MTProtoTcpConnection::class.java)
+        val logger get() = if(KotlogramLogger.enabled) loggerSource else null
     }
 }

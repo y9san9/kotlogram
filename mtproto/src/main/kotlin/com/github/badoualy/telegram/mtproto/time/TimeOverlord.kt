@@ -1,6 +1,7 @@
 package com.github.badoualy.telegram.mtproto.time
 
 import com.github.badoualy.telegram.mtproto.model.DataCenter
+import com.y9san9.kotlogram.internal.KotlogramLogger
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.util.*
@@ -8,7 +9,8 @@ import java.util.*
 
 internal object TimeOverlord {
 
-    var logger: Logger? = null
+    private var loggerSource = LoggerFactory.getLogger(TimeOverlord::class.java)
+    val logger get() = if(KotlogramLogger.enabled) loggerSource else null
 
     // Delta between server time and client time in ms
     private val deltaMap = HashMap<DataCenter, Long>()

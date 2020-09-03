@@ -18,6 +18,7 @@ import com.github.badoualy.telegram.mtproto.util.SolvedPQ
 import com.github.badoualy.telegram.tl.StreamUtils
 import com.github.badoualy.telegram.tl.core.TLMethod
 import com.github.badoualy.telegram.tl.core.TLObject
+import com.y9san9.kotlogram.internal.KotlogramLogger
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.io.ByteArrayInputStream
@@ -32,7 +33,8 @@ import java.util.*
  */
 object AuthKeyCreation {
 
-    var logger: Logger? = null
+    private var loggerSource = LoggerFactory.getLogger(AuthKeyCreation::class.java)
+    private val logger get() = if(KotlogramLogger.enabled) loggerSource else null
 
     private val AUTH_ATTEMPT_COUNT = 5
     private val AUTH_RETRY_COUNT = 5
