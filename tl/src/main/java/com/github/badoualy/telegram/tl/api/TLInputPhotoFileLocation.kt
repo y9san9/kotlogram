@@ -8,7 +8,7 @@ class TLInputPhotoFileLocation(
         private val id: Long,
         private val accessHash: Long,
         private val fileReference: TLBytes,
-        private val thumbSize: TLPhotoSize
+        private val thumbSize: TLAbsPhotoSize
 ) : TLAbsInputFileLocation() {
 
     override fun serializeBody(stream: OutputStream) {
