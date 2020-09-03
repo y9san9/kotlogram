@@ -47,7 +47,6 @@ public class TLInputFileLocation extends TLAbsInputFileLocation {
     }
 
     @Override
-    @SuppressWarnings({"unchecked", "SimplifiableConditionalExpression"})
     public void deserializeBody(InputStream stream, TLContext context) throws IOException {
         volumeId = readLong(stream);
         localId = readInt(stream);

@@ -14,7 +14,7 @@ val OUTPUT_TEST = "./tl/src/test/java"
 
 //val tlRegex = "([^#]+)#([a-f0-9]+) (?:([^:]+):([^ ]+) )*= ([^;]+);".toRegex()
 
-fun main(args: Array<String>) {
+fun main() {
     println("TL Compiler developed by Yannick Badoual, Kotlogram (c) 2016 v1.0")
 
     val tlSchemaNode = ObjectMapper().readValue(File(TL_SCHEMA_PATH), JsonNode::class.java)
