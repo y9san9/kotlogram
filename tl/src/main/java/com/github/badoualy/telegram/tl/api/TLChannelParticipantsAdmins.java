@@ -19,7 +19,7 @@ public class TLChannelParticipantsAdmins extends TLAbsChannelParticipantsFilter 
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

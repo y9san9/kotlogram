@@ -19,7 +19,7 @@ public class TLFileMov extends TLAbsFileType {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

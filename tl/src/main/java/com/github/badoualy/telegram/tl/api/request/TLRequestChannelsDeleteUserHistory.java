@@ -79,7 +79,7 @@ public class TLRequestChannelsDeleteUserHistory extends TLMethod<TLAffectedHisto
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

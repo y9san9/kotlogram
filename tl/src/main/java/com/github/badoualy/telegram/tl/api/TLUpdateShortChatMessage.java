@@ -184,7 +184,7 @@ public class TLUpdateShortChatMessage extends TLAbsUpdates {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

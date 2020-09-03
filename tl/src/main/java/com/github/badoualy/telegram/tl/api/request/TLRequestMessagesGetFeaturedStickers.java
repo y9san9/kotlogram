@@ -73,7 +73,7 @@ public class TLRequestMessagesGetFeaturedStickers extends TLMethod<TLAbsFeatured
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -79,7 +79,7 @@ public class TLEncryptedMessage extends TLAbsEncryptedMessage {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -73,7 +73,7 @@ public class TLRequestMessagesGetWebPagePreview extends TLMethod<TLAbsMessageMed
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

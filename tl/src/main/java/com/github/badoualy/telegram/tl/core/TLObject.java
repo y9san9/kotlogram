@@ -10,8 +10,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-import static com.github.badoualy.telegram.tl.StreamUtils.readInt;
-import static com.github.badoualy.telegram.tl.StreamUtils.writeInt;
+import static com.github.badoualy.telegram.tl.StreamUtils.*;
 
 /**
  * Basic class for all tl-objects. Contains methods for serializing and deserializing object.
@@ -27,7 +26,7 @@ public abstract class TLObject implements Serializable {
     /**
      * @return the constructor id represented by this class
      */
-    public abstract int getConstructorId();
+    public abstract long getConstructorId();
 
     /**
      * Serialize object to byte array
@@ -48,7 +47,7 @@ public abstract class TLObject implements Serializable {
      * @throws IOException
      */
     public final void serialize(OutputStream stream) throws IOException {
-        writeInt(getConstructorId(), stream);
+        writeLong(getConstructorId(), stream);
         serializeBody(stream);
     }
 

@@ -81,7 +81,7 @@ public class TLRequestMessagesReadHistory extends TLMethod<TLAffectedMessages> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

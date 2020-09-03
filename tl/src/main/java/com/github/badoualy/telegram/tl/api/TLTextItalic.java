@@ -53,7 +53,7 @@ public class TLTextItalic extends TLAbsRichText {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

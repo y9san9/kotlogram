@@ -31,7 +31,7 @@ import java.util.zip.GZIPInputStream;
  */
 public abstract class TLContext {
 
-    private HashMap<Integer, Class> registeredClasses;
+    private final HashMap<Long, Class> registeredClasses;
 
     /**
      * It's recommended to use an initial size for better performances
@@ -53,11 +53,11 @@ public abstract class TLContext {
         return isSupportedObject(object.getConstructorId());
     }
 
-    public final boolean isSupportedObject(int constructorId) {
+    public final boolean isSupportedObject(long constructorId) {
         return registeredClasses.containsKey(constructorId);
     }
 
-    public final <T extends TLObject> void registerClass(int constructorId, Class<T> clazz) {
+    public final <T extends TLObject> void registerClass(long constructorId, Class<T> clazz) {
         registeredClasses.put(constructorId, clazz);
     }
 
@@ -65,7 +65,7 @@ public abstract class TLContext {
         return deserializeMessage(data, null, -1);
     }
 
-    public final <T extends TLObject> T deserializeMessage(byte[] data, Class<T> clazz, int constructorId) throws IOException {
+    public final <T extends TLObject> T deserializeMessage(byte[] data, Class<T> clazz, long constructorId) throws IOException {
         return deserializeMessage(new ByteArrayInputStream(data), clazz, constructorId);
     }
 
@@ -84,7 +84,7 @@ public abstract class TLContext {
      * @throws IOException
      */
     @SuppressWarnings({"unchecked", "DuplicateThrows"})
-    public final <T extends TLObject> T deserializeMessage(InputStream stream, Class<T> clazz, int constructorId) throws DeserializationException, IOException {
+    public final <T extends TLObject> T deserializeMessage(InputStream stream, Class<T> clazz, long constructorId) throws DeserializationException, IOException {
         int realConstructorId = StreamUtils.readInt(stream);
         if (constructorId != -1 && realConstructorId != constructorId) {
             throw new InvalidConstructorIdException(realConstructorId, constructorId);

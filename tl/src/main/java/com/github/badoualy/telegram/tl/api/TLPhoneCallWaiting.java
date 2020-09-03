@@ -113,7 +113,7 @@ public class TLPhoneCallWaiting extends TLAbsPhoneCall {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -19,7 +19,7 @@ public class TLUserStatusEmpty extends TLAbsUserStatus {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

@@ -97,7 +97,7 @@ public class TLRequestInitConnection<T extends TLObject> extends TLMethod<T> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

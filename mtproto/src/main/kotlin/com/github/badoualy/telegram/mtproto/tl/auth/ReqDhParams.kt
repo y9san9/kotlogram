@@ -13,7 +13,7 @@ class ReqDhParams @JvmOverloads constructor(var nonce: ByteArray = ByteArray(0),
                                             var fingerPrint: Long = 0,
                                             var encryptedData: ByteArray = ByteArray(0)) : TLMethod<ServerDhParams> () {
 
-    override fun getConstructorId(): Int {
+    override fun getConstructorId(): Long {
         return CONSTRUCTOR_ID
     }
 
@@ -54,6 +54,6 @@ class ReqDhParams @JvmOverloads constructor(var nonce: ByteArray = ByteArray(0),
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = -686627650
+        val CONSTRUCTOR_ID = 686627650L
     }
 }

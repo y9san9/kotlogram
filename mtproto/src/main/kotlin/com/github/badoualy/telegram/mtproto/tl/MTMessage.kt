@@ -9,9 +9,7 @@ import java.io.OutputStream
 
 class MTMessage @JvmOverloads constructor(var messageId: Long = 0, var seqNo: Int = 0, var payload: ByteArray = ByteArray(0), var  payloadLength: Int = payload.size) : TLObject() {
 
-    override fun getConstructorId(): Int {
-        return 0
-    }
+    override fun getConstructorId() = 0L
 
     @Throws(IOException::class)
     override fun serializeBody(stream: OutputStream) {

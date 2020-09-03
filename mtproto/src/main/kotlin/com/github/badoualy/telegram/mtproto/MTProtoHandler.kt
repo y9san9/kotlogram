@@ -434,7 +434,7 @@ class MTProtoHandler {
                          "Received msg ${message.messageId} with seqNo ${message.seqNo}")
 
             // Check if is a container
-            when (StreamUtils.readInt(message.payload)) {
+            when (StreamUtils.readLong(message.payload)) {
                 MTMessagesContainer.CONSTRUCTOR_ID -> {
                     logger?.trace(session.marker, "Message is a container")
                     val container = mtProtoContext.deserializeMessage(message.payload,
@@ -461,7 +461,7 @@ class MTProtoHandler {
     @Throws(DeserializationException::class, IOException::class)
     private fun deserializeMessageContent(message: MTMessage): TLObject {
         // Default container, handle content
-        val classId = StreamUtils.readInt(message.payload)
+        val classId = StreamUtils.readLong(message.payload)
         logger?.trace(session.marker, "Reading constructor $classId")
         if (mtProtoContext.isSupportedObject(classId)) {
             logger?.trace(session.marker, "$classId is supported by MTProtoContext")
@@ -618,7 +618,7 @@ class MTProtoHandler {
                     null
                 }
 
-        val classId = StreamUtils.readInt(result.content)
+        val classId = StreamUtils.readLong(result.content)
         logger?.debug(session.marker, "Response is a $classId")
         if (mtProtoContext.isSupportedObject(classId)) {
             val resultContent = mtProtoContext.deserializeMessage(result.content)

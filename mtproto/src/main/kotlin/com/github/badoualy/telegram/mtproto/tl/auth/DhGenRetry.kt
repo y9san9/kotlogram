@@ -3,7 +3,7 @@ package com.github.badoualy.telegram.mtproto.tl.auth
 class DhGenRetry @JvmOverloads constructor(nonce: ByteArray = ByteArray(0), serverNonce: ByteArray = ByteArray(0),
                                            newNonceHash: ByteArray = ByteArray(0)) : DhGenResult(nonce, serverNonce, newNonceHash) {
 
-    override fun getConstructorId(): Int {
+    override fun getConstructorId(): Long {
         return CONSTRUCTOR_ID
     }
 
@@ -13,6 +13,6 @@ class DhGenRetry @JvmOverloads constructor(nonce: ByteArray = ByteArray(0), serv
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 1188831161
+        val CONSTRUCTOR_ID = 1188831161L
     }
 }

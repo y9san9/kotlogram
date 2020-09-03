@@ -129,7 +129,7 @@ public class TLUpdateBotCallbackQuery extends TLAbsUpdate {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

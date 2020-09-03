@@ -310,8 +310,8 @@ internal class DefaultTelegramClient internal constructor(val application: Teleg
                                     application.langCode, query))!!
 
     @Throws(RpcErrorException::class, IOException::class)
-    override fun messagesSendMessage(peer: TLAbsInputPeer, message: String, randomId: Long) = super.messagesSendMessage(
-            true, false, false, false, peer, null, message, randomId, null, null)!!
+    override fun messagesSendMessage(peer: TLAbsInputPeer, message: String, randomId: Long, scheduleDate: Long?) = super.messagesSendMessage(
+            true, false, false, false, peer, null, message, randomId, null, null, scheduleDate)!!
 
     private fun migrate(dcId: Int) {
         logger?.info(marker, "Migrating to DC$dcId")

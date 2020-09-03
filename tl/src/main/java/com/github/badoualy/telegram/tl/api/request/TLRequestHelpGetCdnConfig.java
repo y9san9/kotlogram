@@ -44,7 +44,7 @@ public class TLRequestHelpGetCdnConfig extends TLMethod<TLCdnConfig> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

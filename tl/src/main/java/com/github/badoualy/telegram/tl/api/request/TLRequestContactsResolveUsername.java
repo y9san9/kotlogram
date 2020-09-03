@@ -73,7 +73,7 @@ public class TLRequestContactsResolveUsername extends TLMethod<TLResolvedPeer> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

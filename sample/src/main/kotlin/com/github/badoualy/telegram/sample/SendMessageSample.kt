@@ -34,10 +34,9 @@ object SendMessageSample {
                 is TLAbsChat -> tlPeerObj.toInputPeer()
                 else -> null
             } ?: TLInputPeerEmpty()
-
             val tlAbsUpdates = client.messagesSendMessage(inputPeer,
                                                           "Sent from Kotlogram :)",
-                                                          RandomUtils.randomLong())
+                                                          RandomUtils.randomLong(), null)
             // tlAbsUpdates contains the id and date of the message in a TLUpdateShortSentMessage
         } catch (e: RpcErrorException) {
             e.printStackTrace()

@@ -74,7 +74,7 @@ public class TLRequestAuthCheckPassword extends TLMethod<TLAuthorization> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

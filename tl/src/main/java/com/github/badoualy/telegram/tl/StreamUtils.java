@@ -342,6 +342,10 @@ public final class StreamUtils {
         return a + (b << 8) + (c << 16) + (d << 24);
     }
 
+    public static long readLong(byte[] src) {
+        return readLong(src, 0);
+    }
+
     @SuppressWarnings("PointlessBitwiseExpression")
     public static long readLong(byte[] src, int offset) {
         long a = readUInt(src, offset);

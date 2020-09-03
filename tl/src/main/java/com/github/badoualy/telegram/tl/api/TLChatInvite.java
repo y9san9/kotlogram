@@ -120,7 +120,7 @@ public class TLChatInvite extends TLAbsChatInvite {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

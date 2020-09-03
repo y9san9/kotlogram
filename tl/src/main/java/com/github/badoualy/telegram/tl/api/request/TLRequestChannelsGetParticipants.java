@@ -94,7 +94,7 @@ public class TLRequestChannelsGetParticipants extends TLMethod<TLChannelParticip
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -86,7 +86,7 @@ public class TLPeerNotifySettings extends TLAbsPeerNotifySettings {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -58,12 +58,18 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
 
     protected TLVector<TLAbsMessageEntity> entities;
 
+    protected Long scheduleDate;
+
     private final String _constructor = "messages.sendMessage#fa88427a";
 
     public TLRequestMessagesSendMessage() {
     }
 
-    public TLRequestMessagesSendMessage(boolean noWebpage, boolean silent, boolean background, boolean clearDraft, TLAbsInputPeer peer, Integer replyToMsgId, String message, long randomId, TLAbsReplyMarkup replyMarkup, TLVector<TLAbsMessageEntity> entities) {
+    public TLRequestMessagesSendMessage(
+            boolean noWebpage, boolean silent, boolean background,
+            boolean clearDraft, TLAbsInputPeer peer, Integer replyToMsgId,
+            String message, long randomId, TLAbsReplyMarkup replyMarkup,
+            TLVector<TLAbsMessageEntity> entities, Long scheduleDate) {
         this.noWebpage = noWebpage;
         this.silent = silent;
         this.background = background;
@@ -74,6 +80,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
         this.randomId = randomId;
         this.replyMarkup = replyMarkup;
         this.entities = entities;
+        this.scheduleDate = scheduleDate;
     }
 
     @Override
@@ -92,13 +99,14 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
 
     private void computeFlags() {
         flags = 0;
-        flags = noWebpage ? (flags | 2) : (flags & ~2);
+        flags = noWebpage ? (flags | 2) : 0;
         flags = silent ? (flags | 32) : (flags & ~32);
         flags = background ? (flags | 64) : (flags & ~64);
         flags = clearDraft ? (flags | 128) : (flags & ~128);
         flags = replyToMsgId != null ? (flags | 1) : (flags & ~1);
         flags = replyMarkup != null ? (flags | 4) : (flags & ~4);
         flags = entities != null ? (flags | 8) : (flags & ~8);
+        flags = scheduleDate != null ? (flags | 1024) : (flags & ~1024);
     }
 
     @Override
@@ -120,6 +128,9 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
         if ((flags & 8) != 0) {
             if (entities == null) throwNullFieldException("entities", flags);
             writeTLVector(entities, stream);
+        }
+        if ((flags & 1024) != 0) {
+            writeLong(scheduleDate, stream);
         }
     }
 
@@ -169,7 +180,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 
