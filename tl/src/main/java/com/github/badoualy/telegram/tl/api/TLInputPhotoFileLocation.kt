@@ -15,7 +15,7 @@ class TLInputPhotoFileLocation(
         writeLong(id, stream)
         writeLong(accessHash, stream)
         writeTLBytes(fileReference, stream)
-        writeString(String(thumbSize.serialize()), stream)
+        writeTLObject(thumbSize, stream)
     }
 
     override fun getConstructorId() = 0x40181ffe
