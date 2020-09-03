@@ -10,7 +10,7 @@ import java.io.OutputStream
 
 class MTInvokeAfter(var dependMsgId: Long = 0, var request: ByteArray = ByteArray(0)) : TLObject() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -27,6 +27,6 @@ class MTInvokeAfter(var dependMsgId: Long = 0, var request: ByteArray = ByteArra
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = -878758099L
+        val CONSTRUCTOR_ID = -878758099
     }
 }

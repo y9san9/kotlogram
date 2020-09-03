@@ -8,7 +8,7 @@ import java.io.OutputStream
 
 class MTBadServerSalt @JvmOverloads constructor(badMsgId: Long = 0, badMsqSeqno: Int = 0, errorCode: Int = 0, var newSalt: Long = 0) : MTBadMessage(badMsgId, badMsqSeqno, errorCode) {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -34,6 +34,6 @@ class MTBadServerSalt @JvmOverloads constructor(badMsgId: Long = 0, badMsqSeqno:
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = -307542917L
+        val CONSTRUCTOR_ID = -307542917
     }
 }

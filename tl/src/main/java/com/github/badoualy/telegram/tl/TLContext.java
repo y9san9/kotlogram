@@ -31,7 +31,7 @@ import java.util.zip.GZIPInputStream;
  */
 public abstract class TLContext {
 
-    private final HashMap<Long, Class> registeredClasses;
+    private final HashMap<Integer, Class> registeredClasses;
 
     /**
      * It's recommended to use an initial size for better performances
@@ -57,7 +57,7 @@ public abstract class TLContext {
         return registeredClasses.containsKey(constructorId);
     }
 
-    public final <T extends TLObject> void registerClass(long constructorId, Class<T> clazz) {
+    public final <T extends TLObject> void registerClass(int constructorId, Class<T> clazz) {
         registeredClasses.put(constructorId, clazz);
     }
 
@@ -65,7 +65,7 @@ public abstract class TLContext {
         return deserializeMessage(data, null, -1);
     }
 
-    public final <T extends TLObject> T deserializeMessage(byte[] data, Class<T> clazz, long constructorId) throws IOException {
+    public final <T extends TLObject> T deserializeMessage(byte[] data, Class<T> clazz, int constructorId) throws IOException {
         return deserializeMessage(new ByteArrayInputStream(data), clazz, constructorId);
     }
 

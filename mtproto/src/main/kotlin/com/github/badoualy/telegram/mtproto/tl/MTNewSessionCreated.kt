@@ -10,7 +10,7 @@ import java.io.OutputStream
 
 class MTNewSessionCreated @JvmOverloads constructor(var firstMsgId: Long = 0, var uniqId: Long = 0, var serverSalt: Long = 0) : TLObject() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -34,6 +34,6 @@ class MTNewSessionCreated @JvmOverloads constructor(var firstMsgId: Long = 0, va
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = -1631450872L
+        val CONSTRUCTOR_ID = -1631450872
     }
 }

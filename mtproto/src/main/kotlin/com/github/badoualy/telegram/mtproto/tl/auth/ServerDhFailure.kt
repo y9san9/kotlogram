@@ -10,7 +10,7 @@ import java.io.OutputStream
 class ServerDhFailure @JvmOverloads constructor(var nonce: ByteArray = ByteArray(0), var serverNonce: ByteArray = ByteArray(0),
                                                 var newNonceHash: ByteArray = ByteArray(0)) : ServerDhParams() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -34,6 +34,6 @@ class ServerDhFailure @JvmOverloads constructor(var nonce: ByteArray = ByteArray
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 2043348061L
+        val CONSTRUCTOR_ID = 2043348061
     }
 }

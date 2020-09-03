@@ -11,7 +11,7 @@ class ServerDhInner @JvmOverloads constructor(var nonce: ByteArray = ByteArray(0
                                               var g: Int = 0, var dhPrime: ByteArray = ByteArray(0),
                                               var g_a: ByteArray = ByteArray(0), var serverTime: Int = 0) : TLObject() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -37,6 +37,6 @@ class ServerDhInner @JvmOverloads constructor(var nonce: ByteArray = ByteArray(0
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 1249309254L
+        val CONSTRUCTOR_ID = 1249309254
     }
 }

@@ -10,7 +10,7 @@ import java.io.OutputStream
 
 class MTGetFutureSalts @JvmOverloads constructor(var num: Int = 0) : TLObject() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -30,6 +30,6 @@ class MTGetFutureSalts @JvmOverloads constructor(var num: Int = 0) : TLObject() 
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = -1188971260L
+        val CONSTRUCTOR_ID = -1188971260
     }
 }

@@ -10,7 +10,7 @@ import java.io.OutputStream
 
 class MTPong @JvmOverloads constructor(var messageId: Long = 0, var pingId: Long = 0) : TLObject() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -32,6 +32,6 @@ class MTPong @JvmOverloads constructor(var messageId: Long = 0, var pingId: Long
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 880243653L
+        val CONSTRUCTOR_ID = 880243653
     }
 }

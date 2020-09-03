@@ -22,7 +22,7 @@ class MTRpcError @JvmOverloads constructor(var errorCode: Int = 0, var message: 
             return "DEFAULT"
         }
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -46,6 +46,6 @@ class MTRpcError @JvmOverloads constructor(var errorCode: Int = 0, var message: 
         private val REGEXP_PATTERN = Pattern.compile("[A-Z_0-9]+")
 
         @JvmField
-        val CONSTRUCTOR_ID = 558156313L
+        val CONSTRUCTOR_ID = 558156313
     }
 }

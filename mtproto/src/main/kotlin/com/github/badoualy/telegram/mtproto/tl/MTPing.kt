@@ -10,7 +10,7 @@ import java.io.OutputStream
 
 class MTPing @JvmOverloads constructor(var pingId: Long = 0) : TLObject() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -30,6 +30,6 @@ class MTPing @JvmOverloads constructor(var pingId: Long = 0) : TLObject() {
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 2059302892L
+        val CONSTRUCTOR_ID = 2059302892
     }
 }

@@ -19,7 +19,7 @@ class MTNeedResendMessage @JvmOverloads constructor(var messages: TLLongVector =
         messages.addAll(msgIds)
     }
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -39,6 +39,6 @@ class MTNeedResendMessage @JvmOverloads constructor(var messages: TLLongVector =
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 2105940488L
+        val CONSTRUCTOR_ID = 2105940488
     }
 }

@@ -9,7 +9,7 @@ import java.io.OutputStream
 
 class MTNewMessageDetailedInfo @JvmOverloads constructor(var answerMsgId: Long = 0, var bytes: Int = 0, var status: Int = 0) : TLObject() {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -33,6 +33,6 @@ class MTNewMessageDetailedInfo @JvmOverloads constructor(var answerMsgId: Long =
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 2137147681L
+        val CONSTRUCTOR_ID = 2137147681
     }
 }

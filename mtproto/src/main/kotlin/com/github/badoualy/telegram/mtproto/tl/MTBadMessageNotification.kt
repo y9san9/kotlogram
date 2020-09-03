@@ -8,7 +8,7 @@ import java.io.OutputStream
 
 class MTBadMessageNotification @JvmOverloads constructor(badMsgId: Long = 0, badMsqSeqno: Int = 0, errorCode: Int = 0) : MTBadMessage(badMsgId, badMsqSeqno, errorCode) {
 
-    override fun getConstructorId(): Long {
+    override fun getConstructorId(): Int {
         return CONSTRUCTOR_ID
     }
 
@@ -32,6 +32,6 @@ class MTBadMessageNotification @JvmOverloads constructor(badMsgId: Long = 0, bad
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = -1477445615L
+        val CONSTRUCTOR_ID = -1477445615
     }
 }

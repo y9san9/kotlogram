@@ -18,6 +18,6 @@ class TLInputPhotoFileLocation(
         writeString(thumbSize.type, stream)
     }
 
-    override fun getConstructorId() = 0x40181ffeL
+    override fun getConstructorId(): Int = 0x40181ffe
     override fun toString() = "inputPhotoFileLocation#40181ffe"
 }
