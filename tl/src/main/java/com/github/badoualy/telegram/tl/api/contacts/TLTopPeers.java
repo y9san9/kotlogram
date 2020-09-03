@@ -69,7 +69,7 @@ public class TLTopPeers extends TLAbsTopPeers {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

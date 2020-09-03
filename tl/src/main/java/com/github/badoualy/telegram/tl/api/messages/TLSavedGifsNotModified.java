@@ -19,7 +19,7 @@ public class TLSavedGifsNotModified extends TLAbsSavedGifs {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

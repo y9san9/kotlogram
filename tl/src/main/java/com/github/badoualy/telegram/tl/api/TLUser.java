@@ -275,7 +275,7 @@ public class TLUser extends TLAbsUser {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

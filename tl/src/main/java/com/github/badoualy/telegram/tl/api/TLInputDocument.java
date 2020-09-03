@@ -60,7 +60,7 @@ public class TLInputDocument extends TLAbsInputDocument {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

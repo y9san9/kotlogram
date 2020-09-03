@@ -62,7 +62,7 @@ public class TLInputMediaPhoto extends TLAbsInputMedia {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

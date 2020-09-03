@@ -63,7 +63,7 @@ public class TLRequestUsersGetUsers extends TLMethod<TLVector<TLAbsUser>> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -68,7 +68,7 @@ public class TLUserProfilePhoto extends TLAbsUserProfilePhoto {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

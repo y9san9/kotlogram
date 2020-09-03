@@ -19,7 +19,7 @@ public class TLInputMessagesFilterPhotoVideoDocuments extends TLAbsMessagesFilte
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

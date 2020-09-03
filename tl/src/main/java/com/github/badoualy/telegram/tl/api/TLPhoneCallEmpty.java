@@ -52,7 +52,7 @@ public class TLPhoneCallEmpty extends TLAbsPhoneCall {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

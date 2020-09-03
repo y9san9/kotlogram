@@ -44,7 +44,7 @@ public class TLRequestHelpGetTermsOfService extends TLMethod<TLTermsOfService> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

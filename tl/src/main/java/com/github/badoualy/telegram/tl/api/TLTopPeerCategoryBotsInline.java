@@ -19,7 +19,7 @@ public class TLTopPeerCategoryBotsInline extends TLAbsTopPeerCategory {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

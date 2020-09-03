@@ -19,7 +19,7 @@ public class TLMessageActionEmpty extends TLAbsMessageAction {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

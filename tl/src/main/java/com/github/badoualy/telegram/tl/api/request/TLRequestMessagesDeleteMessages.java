@@ -94,7 +94,7 @@ public class TLRequestMessagesDeleteMessages extends TLMethod<TLAffectedMessages
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

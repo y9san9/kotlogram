@@ -19,7 +19,7 @@ public class TLChannelParticipantsRecent extends TLAbsChannelParticipantsFilter 
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

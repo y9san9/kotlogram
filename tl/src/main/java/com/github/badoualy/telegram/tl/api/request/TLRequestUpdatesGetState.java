@@ -44,7 +44,7 @@ public class TLRequestUpdatesGetState extends TLMethod<TLState> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

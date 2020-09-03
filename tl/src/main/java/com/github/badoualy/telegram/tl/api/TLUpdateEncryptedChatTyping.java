@@ -54,7 +54,7 @@ public class TLUpdateEncryptedChatTyping extends TLAbsUpdate {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

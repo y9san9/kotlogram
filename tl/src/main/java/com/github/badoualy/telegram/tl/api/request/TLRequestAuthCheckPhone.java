@@ -73,7 +73,7 @@ public class TLRequestAuthCheckPhone extends TLMethod<TLCheckedPhone> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

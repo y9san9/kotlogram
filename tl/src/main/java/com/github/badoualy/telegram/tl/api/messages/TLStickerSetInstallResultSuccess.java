@@ -19,7 +19,7 @@ public class TLStickerSetInstallResultSuccess extends TLAbsStickerSetInstallResu
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

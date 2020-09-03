@@ -19,7 +19,7 @@ public class TLAllStickersNotModified extends TLAbsAllStickers {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

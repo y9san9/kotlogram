@@ -124,7 +124,7 @@ public class TLPhoneCall extends TLAbsPhoneCall {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

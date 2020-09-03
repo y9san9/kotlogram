@@ -61,7 +61,7 @@ public class TLRequestInvokeWithoutUpdates<T extends TLObject> extends TLMethod<
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -35,7 +35,7 @@ public class TLRequestAccountGetWallPapers extends TLMethod<TLVector<TLAbsWallPa
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

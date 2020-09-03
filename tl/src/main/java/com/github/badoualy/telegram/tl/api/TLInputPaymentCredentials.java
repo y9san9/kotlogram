@@ -74,7 +74,7 @@ public class TLInputPaymentCredentials extends TLAbsInputPaymentCredentials {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

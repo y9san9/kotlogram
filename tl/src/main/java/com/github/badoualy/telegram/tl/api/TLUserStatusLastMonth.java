@@ -19,7 +19,7 @@ public class TLUserStatusLastMonth extends TLAbsUserStatus {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

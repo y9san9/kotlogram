@@ -92,7 +92,7 @@ public class TLRequestMessagesGetDocumentByHash extends TLMethod<TLAbsDocument> 
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

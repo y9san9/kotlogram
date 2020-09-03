@@ -73,7 +73,7 @@ public class TLRequestMessagesGetFullChat extends TLMethod<TLChatFull> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

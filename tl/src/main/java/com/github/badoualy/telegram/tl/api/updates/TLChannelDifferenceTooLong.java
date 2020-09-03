@@ -125,7 +125,7 @@ public class TLChannelDifferenceTooLong extends TLAbsChannelDifference {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

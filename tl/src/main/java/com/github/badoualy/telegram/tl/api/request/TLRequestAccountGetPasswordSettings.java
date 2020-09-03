@@ -74,7 +74,7 @@ public class TLRequestAccountGetPasswordSettings extends TLMethod<TLPasswordSett
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

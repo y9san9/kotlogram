@@ -19,7 +19,7 @@ public class TLNotifyChats extends TLAbsNotifyPeer {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

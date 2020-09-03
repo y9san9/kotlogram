@@ -82,7 +82,7 @@ public class TLRequestMessagesSearchGifs extends TLMethod<TLFoundGifs> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

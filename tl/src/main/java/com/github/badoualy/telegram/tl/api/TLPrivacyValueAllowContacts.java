@@ -19,7 +19,7 @@ public class TLPrivacyValueAllowContacts extends TLAbsPrivacyRule {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

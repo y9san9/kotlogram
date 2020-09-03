@@ -79,7 +79,7 @@ public class TLRequestContactsGetBlocked extends TLMethod<TLAbsBlocked> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

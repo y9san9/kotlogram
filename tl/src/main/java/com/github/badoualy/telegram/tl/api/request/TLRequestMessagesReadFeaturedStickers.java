@@ -73,7 +73,7 @@ public class TLRequestMessagesReadFeaturedStickers extends TLMethod<TLBool> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

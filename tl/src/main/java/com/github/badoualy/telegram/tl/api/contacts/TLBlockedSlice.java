@@ -67,7 +67,7 @@ public class TLBlockedSlice extends TLAbsBlocked {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

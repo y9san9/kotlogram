@@ -73,7 +73,7 @@ public class TLRequestPaymentsGetPaymentForm extends TLMethod<TLPaymentForm> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

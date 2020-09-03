@@ -55,7 +55,7 @@ public class TLTermsOfService extends TLObject {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

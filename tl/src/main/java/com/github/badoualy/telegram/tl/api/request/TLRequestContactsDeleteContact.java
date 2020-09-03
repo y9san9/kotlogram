@@ -72,7 +72,7 @@ public class TLRequestContactsDeleteContact extends TLMethod<TLLink> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -73,7 +73,7 @@ public class TLRequestMessagesCheckChatInvite extends TLMethod<TLAbsChatInvite> 
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

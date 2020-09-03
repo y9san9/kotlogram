@@ -72,7 +72,7 @@ public class TLWallPaper extends TLAbsWallPaper {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

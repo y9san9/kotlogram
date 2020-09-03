@@ -44,7 +44,7 @@ public class TLRequestPaymentsGetSavedInfo extends TLMethod<TLSavedInfo> {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

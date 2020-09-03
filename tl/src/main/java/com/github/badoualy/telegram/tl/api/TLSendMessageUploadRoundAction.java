@@ -54,7 +54,7 @@ public class TLSendMessageUploadRoundAction extends TLAbsSendMessageAction {
     }
 
     @Override
-    public long getConstructorId() {
+    public int getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 
