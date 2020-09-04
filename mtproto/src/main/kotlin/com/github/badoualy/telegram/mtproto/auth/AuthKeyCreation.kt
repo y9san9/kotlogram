@@ -119,13 +119,16 @@ object AuthKeyCreation {
         StreamUtils.writeByteArray(data, out) // message_data
         val response = connection!!.executeMethod(out.toByteArray())
 
+        println("Generating stream")
         val inputStream = ByteArrayInputStream(response)
         val authId = StreamUtils.readLong(inputStream)
         if (authId == 0L) {
             @Suppress("UNUSED_VARIABLE")
             val messageId = StreamUtils.readLong(inputStream)
             val length = StreamUtils.readInt(inputStream)
+            println("Responsing")
             val messageResponse = StreamUtils.readBytes(length, inputStream)
+            println("Responsed")
             return method.deserializeResponse(messageResponse, authContext)
         } else
             throw IOException("Auth id must be equal to zero")
