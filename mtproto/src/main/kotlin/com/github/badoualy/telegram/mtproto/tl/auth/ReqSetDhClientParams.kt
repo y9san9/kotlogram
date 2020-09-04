@@ -12,7 +12,7 @@ class ReqSetDhClientParams @JvmOverloads constructor(var nonce: ByteArray = Byte
                                                      var serverNonce: ByteArray = ByteArray(0),
                                                      var encrypted: ByteArray = ByteArray(0)) : TLMethod<DhGenResult>() {
 
-    override fun getConstructorId(): Int {
+    override fun getConstructorId(): Long {
         return CONSTRUCTOR_ID
     }
 
@@ -45,6 +45,6 @@ class ReqSetDhClientParams @JvmOverloads constructor(var nonce: ByteArray = Byte
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 184262881
+        val CONSTRUCTOR_ID = 184262881L
     }
 }

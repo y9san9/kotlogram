@@ -60,7 +60,7 @@ public class TLDocumentAttributeImageSize extends TLAbsDocumentAttribute {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

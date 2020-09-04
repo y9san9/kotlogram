@@ -63,7 +63,7 @@ public class TLVector<T> extends TLObject implements List<T> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

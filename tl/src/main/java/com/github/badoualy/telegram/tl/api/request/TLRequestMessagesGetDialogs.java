@@ -111,7 +111,7 @@ public class TLRequestMessagesGetDialogs extends TLMethod<TLAbsDialogs> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

@@ -44,7 +44,7 @@ public class TLRequestAuthRequestPasswordRecovery extends TLMethod<TLPasswordRec
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

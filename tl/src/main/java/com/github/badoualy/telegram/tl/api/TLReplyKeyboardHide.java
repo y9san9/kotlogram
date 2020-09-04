@@ -66,7 +66,7 @@ public class TLReplyKeyboardHide extends TLAbsReplyMarkup {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

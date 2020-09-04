@@ -80,7 +80,7 @@ public class TLChatParticipantsForbidden extends TLAbsChatParticipants {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

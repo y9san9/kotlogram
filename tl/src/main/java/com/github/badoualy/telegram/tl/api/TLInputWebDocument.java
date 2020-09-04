@@ -79,7 +79,7 @@ public class TLInputWebDocument extends TLObject {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

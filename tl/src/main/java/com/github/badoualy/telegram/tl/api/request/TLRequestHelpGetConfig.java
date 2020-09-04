@@ -44,7 +44,7 @@ public class TLRequestHelpGetConfig extends TLMethod<TLConfig> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

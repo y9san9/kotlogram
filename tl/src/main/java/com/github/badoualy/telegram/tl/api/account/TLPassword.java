@@ -81,7 +81,7 @@ public class TLPassword extends TLAbsPassword {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

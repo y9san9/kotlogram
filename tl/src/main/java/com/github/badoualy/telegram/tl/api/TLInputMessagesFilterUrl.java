@@ -19,7 +19,7 @@ public class TLInputMessagesFilterUrl extends TLAbsMessagesFilter {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

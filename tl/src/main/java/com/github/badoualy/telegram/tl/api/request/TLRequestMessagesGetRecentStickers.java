@@ -91,7 +91,7 @@ public class TLRequestMessagesGetRecentStickers extends TLMethod<TLAbsRecentStic
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

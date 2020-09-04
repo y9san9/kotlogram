@@ -435,7 +435,7 @@ class MTProtoHandler {
                          "Received msg ${message.messageId} with seqNo ${message.seqNo}")
 
             // Check if is a container
-            when (StreamUtils.readInt(message.payload)) {
+            when (StreamUtils.readInt(message.payload).toLong()) {
                 MTMessagesContainer.CONSTRUCTOR_ID -> {
                     logger?.trace(session.marker, "Message is a container")
                     val container = mtProtoContext.deserializeMessage(message.payload,

@@ -19,7 +19,7 @@ public class TLUpdatePtsChanged extends TLAbsUpdate {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

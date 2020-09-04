@@ -116,7 +116,7 @@ public class TLRequestMessagesGetBotCallbackAnswer extends TLMethod<TLBotCallbac
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

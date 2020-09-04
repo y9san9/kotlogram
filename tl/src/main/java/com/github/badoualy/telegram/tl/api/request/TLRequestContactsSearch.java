@@ -82,7 +82,7 @@ public class TLRequestContactsSearch extends TLMethod<TLFound> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

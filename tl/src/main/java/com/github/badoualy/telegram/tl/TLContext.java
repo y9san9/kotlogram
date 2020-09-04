@@ -54,18 +54,18 @@ public abstract class TLContext {
     }
 
     public final boolean isSupportedObject(long constructorId) {
-        return registeredClasses.containsKey(constructorId);
+        return registeredClasses.containsKey((int) constructorId);
     }
 
-    public final <T extends TLObject> void registerClass(int constructorId, Class<T> clazz) {
-        registeredClasses.put(constructorId, clazz);
+    public final <T extends TLObject> void registerClass(long constructorId, Class<T> clazz) {
+        registeredClasses.put((int) constructorId, clazz);
     }
 
     public final TLObject deserializeMessage(byte[] data) throws IOException {
         return deserializeMessage(data, null, -1);
     }
 
-    public final <T extends TLObject> T deserializeMessage(byte[] data, Class<T> clazz, int constructorId) throws IOException {
+    public final <T extends TLObject> T deserializeMessage(byte[] data, Class<T> clazz, long constructorId) throws IOException {
         return deserializeMessage(new ByteArrayInputStream(data), clazz, constructorId);
     }
 
@@ -85,7 +85,7 @@ public abstract class TLContext {
      */
     @SuppressWarnings({"unchecked", "DuplicateThrows"})
     public final <T extends TLObject> T deserializeMessage(InputStream stream, Class<T> clazz, long constructorId) throws DeserializationException, IOException {
-        int realConstructorId = StreamUtils.readInt(stream);
+        long realConstructorId = StreamUtils.readInt(stream);
         if (constructorId != -1 && realConstructorId != constructorId) {
             throw new InvalidConstructorIdException(realConstructorId, constructorId);
         } else if (constructorId == -1) {
@@ -107,7 +107,7 @@ public abstract class TLContext {
 
         try {
             if (clazz == null) {
-                clazz = registeredClasses.get(constructorId);
+                clazz = registeredClasses.get((int) constructorId);
                 if (clazz == null)
                     throw new UnsupportedConstructorException(constructorId);
             }
@@ -116,7 +116,7 @@ public abstract class TLContext {
             message.deserializeBody(stream, this);
             return message;
         } catch (ReflectiveOperationException e) {
-            // !! Should never happen
+            // !! Should never happen (only if TLObject class has no empty constructor provided)
             throw new RuntimeException("Unable to deserialize data. This error should not happen", e);
         }
     }

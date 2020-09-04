@@ -35,7 +35,7 @@ class ReqPQ constructor(nonce: ByteArray? = null) : TLMethod<ResPQ>() {
         return response
     }
 
-    override fun getConstructorId(): Int {
+    override fun getConstructorId(): Long {
         return CONSTRUCTOR_ID
     }
 
@@ -55,6 +55,6 @@ class ReqPQ constructor(nonce: ByteArray? = null) : TLMethod<ResPQ>() {
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 1615239032
+        val CONSTRUCTOR_ID = 1615239032L
     }
 }

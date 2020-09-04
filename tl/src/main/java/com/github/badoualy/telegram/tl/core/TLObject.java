@@ -26,7 +26,7 @@ public abstract class TLObject implements Serializable {
     /**
      * @return the constructor id represented by this class
      */
-    public abstract int getConstructorId();
+    public abstract long getConstructorId();
 
     /**
      * Serialize object to byte array
@@ -47,7 +47,7 @@ public abstract class TLObject implements Serializable {
      * @throws IOException
      */
     public final void serialize(OutputStream stream) throws IOException {
-        writeLong(getConstructorId(), stream);
+        writeInt((int) getConstructorId(), stream);
         serializeBody(stream);
     }
 
@@ -59,7 +59,7 @@ public abstract class TLObject implements Serializable {
      * @throws IOException
      */
     public final void deserialize(InputStream stream, TLContext context) throws IOException {
-        int constructorId = readInt(stream);
+        long constructorId = readInt(stream);
         if (constructorId != getConstructorId())
             throw new InvalidConstructorIdException(constructorId, getConstructorId());
         deserializeBody(stream, context);

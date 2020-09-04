@@ -34,7 +34,7 @@ public class TLRequestContactsExportCard extends TLMethod<TLIntVector> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

@@ -21,7 +21,7 @@ class MTMessagesContainer : TLObject {
 
     }
 
-    override fun getConstructorId(): Int {
+    override fun getConstructorId(): Long {
         return CONSTRUCTOR_ID
     }
 
@@ -37,7 +37,7 @@ class MTMessagesContainer : TLObject {
     override fun deserializeBody(stream: InputStream, context: TLContext) {
         val size = readInt(stream)
         messages.clear()
-        for (i in 0..size - 1) {
+        for (i in 0 until size) {
             val message = MTMessage()
             message.deserializeBody(stream, context)
             messages.add(message)
@@ -50,6 +50,6 @@ class MTMessagesContainer : TLObject {
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 1945237724
+        val CONSTRUCTOR_ID = 1945237724L
     }
 }

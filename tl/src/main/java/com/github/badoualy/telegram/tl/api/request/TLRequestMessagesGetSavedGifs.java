@@ -73,7 +73,7 @@ public class TLRequestMessagesGetSavedGifs extends TLMethod<TLAbsSavedGifs> {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

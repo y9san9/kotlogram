@@ -19,7 +19,7 @@ public class TLMessageActionPinMessage extends TLAbsMessageAction {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 }

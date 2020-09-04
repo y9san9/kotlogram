@@ -58,7 +58,7 @@ public class TLChannelParticipant extends TLAbsChannelParticipant {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 

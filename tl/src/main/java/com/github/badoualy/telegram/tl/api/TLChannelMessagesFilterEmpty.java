@@ -19,7 +19,7 @@ public class TLChannelMessagesFilterEmpty extends TLAbsChannelMessagesFilter {
     }
 
     @Override
-    public int getConstructorId() {
+    public long getConstructorId() {
         return CONSTRUCTOR_ID;
     }
 
