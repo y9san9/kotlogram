@@ -71,8 +71,8 @@ object AuthKeyCreation {
         for (i in 0..AUTH_ATTEMPT_COUNT - 1) {
             try {
                 connection = MTProtoTcpConnection(dataCenter.ip, dataCenter.port, tag)
+                println("Connected")
                 val authResult = createKey(tmpKey)
-                println("Auth resulted")
                 logger?.debug(connection!!.marker, "Key created after ${i + 1} attempt in ${System.currentTimeMillis() - start} ms")
                 connection = null
                 return authResult
@@ -233,15 +233,21 @@ object AuthKeyCreation {
         logger?.trace(connection!!.marker, "Got resPQ with " + resPQ.fingerprints.size + " fingerprints")
         logger?.trace(connection!!.marker, "Step1 done")
 
+        println("Step 1")
+
         // Step 2
         val publicKey = Arrays.stream(Key.AVAILABLE_KEYS).filter { k ->
             resPQ.fingerprints.contains(k.fingerprint)
         }.findFirst().orElseThrow { FingerprintNotFoundException(resPQ.fingerprints.joinToString(", ")) }
         logger?.trace(connection!!.marker, "Step2 done")
 
+        println("Step 2")
+
         // Step 3
         val solvedPQ = PQSolver.solve(BigInteger(1, resPQ.pq))
         logger?.trace(connection!!.marker, "Step3 done")
+
+        println("Step 3")
 
         // Step 4
         val pair = createStep4Request(resPQ, solvedPQ, publicKey, tmpKey)
@@ -249,10 +255,14 @@ object AuthKeyCreation {
         val newNonce = pair.second
         logger?.trace(connection!!.marker, "Step4 request created")
 
+        println("Step 3.5")
+
         val start = System.nanoTime()
         val dhParams = executeMethod(reqDhParams)
         val step4Duration = (System.nanoTime() - start) / (1000 * 1000)
         logger?.trace(connection!!.marker, "Step4 done")
+
+        println("Step 4")
 
         // Step 5
         if (dhParams is ServerDhFailure) {
@@ -265,6 +275,8 @@ object AuthKeyCreation {
 
         val serverDhParams = dhParams as ServerDhOk
         logger?.trace(connection!!.marker, "Step5 done")
+
+        println("Step 5")
 
         // -------------------------
         // PQ-Auth end
