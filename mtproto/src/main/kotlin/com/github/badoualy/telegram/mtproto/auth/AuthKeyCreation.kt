@@ -72,6 +72,7 @@ object AuthKeyCreation {
             try {
                 connection = MTProtoTcpConnection(dataCenter.ip, dataCenter.port, tag)
                 val authResult = createKey(tmpKey)
+                println("Auth resulted")
                 logger?.debug(connection!!.marker, "Key created after ${i + 1} attempt in ${System.currentTimeMillis() - start} ms")
                 connection = null
                 return authResult
