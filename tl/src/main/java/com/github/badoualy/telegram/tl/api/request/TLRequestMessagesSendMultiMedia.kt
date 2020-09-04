@@ -7,11 +7,11 @@ import com.github.badoualy.telegram.tl.core.TLMethod
 import java.io.InputStream
 import java.io.OutputStream
 
-class TLRequestMessagesSendMultiMedia : TLMethod<TLAbsUpdates>() {
-    override fun getConstructorId(): Long = 0xcc0110c/*b*/
+class TLRequestMessagesSendMultiMedia(val silent: Boolean) : TLMethod<TLAbsUpdates>() {
+    override fun getConstructorId() = 0xcc0110cb
 
     override fun serializeBody(stream: OutputStream?) {
-        
+
     }
 
     override fun deserializeResponse(stream: InputStream?, context: TLContext?): TLAbsUpdates {
