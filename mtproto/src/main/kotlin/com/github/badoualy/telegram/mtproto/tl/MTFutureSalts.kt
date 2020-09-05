@@ -30,7 +30,7 @@ class MTFutureSalts @JvmOverloads constructor(var requestId: Long = 0, var now: 
         now = readInt(stream)
         val count = readInt(stream)
         salts.clear()
-        for (i in 0 until count) {
+        for (i in 0..count - 1) {
             val salt = MTFutureSalt()
             salt.deserializeBody(stream, context)
             salts.add(salt)
@@ -43,6 +43,6 @@ class MTFutureSalts @JvmOverloads constructor(var requestId: Long = 0, var now: 
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 0xae500895L
+        val CONSTRUCTOR_ID = -1370486635L
     }
 }

@@ -30,6 +30,6 @@ class MTGetFutureSalts @JvmOverloads constructor(var num: Int = 0) : TLObject() 
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 0xb921bd04L
+        val CONSTRUCTOR_ID = -1188971260L
     }
 }

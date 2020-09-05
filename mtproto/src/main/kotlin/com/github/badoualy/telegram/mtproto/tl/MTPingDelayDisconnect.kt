@@ -31,6 +31,6 @@ class MTPingDelayDisconnect @JvmOverloads constructor(var pingId: Long = 0, var 
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 213746804L
+        val CONSTRUCTOR_ID = -213746804L
     }
 }

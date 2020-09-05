@@ -109,10 +109,10 @@ internal class DefaultTelegramClient internal constructor(val application: Teleg
     }
 
     private fun generateAuthKey(): AuthResult {
-        println("Trying to create")
+
         val authResult = AuthKeyCreation.createAuthKey(dataCenter!!, tag) ?:
                 throw RuntimeException("Couldn't generate authorization key")
-        println("Created")
+
         authKey = authResult.authKey
         apiStorage.saveAuthKey(authKey!!)
         apiStorage.saveDc(dataCenter!!)

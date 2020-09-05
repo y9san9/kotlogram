@@ -34,6 +34,6 @@ class MTNewSessionCreated @JvmOverloads constructor(var firstMsgId: Long = 0, va
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 0x9ec20908L
+        val CONSTRUCTOR_ID = -1631450872L
     }
 }

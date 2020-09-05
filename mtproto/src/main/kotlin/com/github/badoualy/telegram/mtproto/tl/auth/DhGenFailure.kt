@@ -13,6 +13,6 @@ class DhGenFailure @JvmOverloads constructor(nonce: ByteArray = ByteArray(0), se
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 1499615742L
+        val CONSTRUCTOR_ID = -1499615742L
     }
 }

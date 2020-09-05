@@ -38,6 +38,6 @@ open class PQInner @JvmOverloads constructor(var pq: ByteArray = ByteArray(0),
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 2083955988L
+        val CONSTRUCTOR_ID = -2083955988L
     }
 }

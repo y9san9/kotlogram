@@ -67,7 +67,7 @@ internal class MTProtoTcpConnection
             if (attempt == ATTEMPT_COUNT)
                 throw ConnectException("Failed to join Telegram server at $ip:$port")
         } while (attempt++ < ATTEMPT_COUNT)
-        println("MTProtoTCPSetup")
+
     }
 
     @Throws(IOException::class)

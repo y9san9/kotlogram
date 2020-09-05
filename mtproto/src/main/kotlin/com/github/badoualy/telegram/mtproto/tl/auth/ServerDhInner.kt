@@ -37,6 +37,6 @@ class ServerDhInner @JvmOverloads constructor(var nonce: ByteArray = ByteArray(0
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 1249309254L
+        val CONSTRUCTOR_ID = -1249309254L
     }
 }
