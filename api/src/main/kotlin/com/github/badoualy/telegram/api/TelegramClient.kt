@@ -94,7 +94,7 @@ interface TelegramClient : TelegramApi {
     override fun <T : TLObject?> initConnection(apiId: Int, deviceModel: String, systemVersion: String, appVersion: String, langCode: String, query: TLMethod<T>): T
 
     /** Convenience method wrapping the argument for a plain text message */
-    fun messagesSendMessage(peer: TLAbsInputPeer, message: String, randomId: Long, scheduleDate: Long?): TLAbsUpdates?
+    fun messagesSendMessage(peer: TLAbsInputPeer, message: String, randomId: Long, scheduleDate: Int?): TLAbsUpdates?
 
     /** Convenience method to downloadSync an user profile photo */
     @Throws(RpcErrorException::class, IOException::class)

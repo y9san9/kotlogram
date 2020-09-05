@@ -22,7 +22,6 @@ import com.github.badoualy.telegram.tl.core.TLMethod
 import com.github.badoualy.telegram.tl.core.TLObject
 import com.github.badoualy.telegram.tl.exception.RpcErrorException
 import com.y9san9.kotlogram.internal.KotlogramLogger
-import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.slf4j.MarkerFactory
 import java.io.IOException
@@ -313,7 +312,7 @@ internal class DefaultTelegramClient internal constructor(val application: Teleg
                                     application.langCode, query))!!
 
     @Throws(RpcErrorException::class, IOException::class)
-    override fun messagesSendMessage(peer: TLAbsInputPeer, message: String, randomId: Long, scheduleDate: Long?) = super.messagesSendMessage(
+    override fun messagesSendMessage(peer: TLAbsInputPeer, message: String, randomId: Long, scheduleDate: Int?) = super.messagesSendMessage(
             true, false, false, false, peer, null, message, randomId, null, null, scheduleDate)!!
 
     private fun migrate(dcId: Int) {
