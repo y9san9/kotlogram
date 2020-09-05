@@ -171,6 +171,9 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
             if (entities == null) throwNullFieldException("entities", flags);
             size += entities.computeSerializedSize();
         }
+        if((flags & 1024) != 0) {
+            size += SIZE_INT64;
+        }
         return size;
     }
 
