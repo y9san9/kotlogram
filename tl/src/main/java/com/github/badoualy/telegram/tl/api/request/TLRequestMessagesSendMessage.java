@@ -34,7 +34,7 @@ import static com.github.badoualy.telegram.tl.TLObjectUtils.computeTLStringSeria
  */
 public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
 
-    public static final int CONSTRUCTOR_ID = 0xfa88427a;
+    public static final int CONSTRUCTOR_ID = 0x520c3870;
 
     protected int flags;
 
@@ -60,7 +60,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
 
     protected Integer scheduleDate;
 
-    private final String _constructor = "messages.sendMessage#fa88427a";
+    private final String _constructor = "messages.sendMessage#520c3870";
 
     public TLRequestMessagesSendMessage() {
     }
@@ -148,6 +148,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
         randomId = readLong(stream);
         replyMarkup = (flags & 4) != 0 ? readTLObject(stream, context, TLAbsReplyMarkup.class, -1) : null;
         entities = (flags & 8) != 0 ? readTLVector(stream, context) : null;
+        scheduleDate = (flags & 1024) != 0 ? readInt(stream) : null;
     }
 
     @Override
