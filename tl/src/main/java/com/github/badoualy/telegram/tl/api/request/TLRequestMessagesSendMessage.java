@@ -172,7 +172,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
             size += entities.computeSerializedSize();
         }
         if((flags & 1024) != 0) {
-            size += SIZE_INT64;
+            size += SIZE_INT32;
         }
         return size;
     }
