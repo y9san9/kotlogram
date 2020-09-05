@@ -462,7 +462,7 @@ class MTProtoHandler {
     @Throws(DeserializationException::class, IOException::class)
     private fun deserializeMessageContent(message: MTMessage): TLObject {
         // Default container, handle content
-        val classId = StreamUtils.readLong(message.payload)
+        val classId = StreamUtils.readInt(message.payload)
         logger?.trace(session.marker, "Reading constructor $classId")
         if (mtProtoContext.isSupportedObject(classId)) {
             logger?.trace(session.marker, "$classId is supported by MTProtoContext")
@@ -619,17 +619,16 @@ class MTProtoHandler {
                     null
                 }
 
-        val classId = StreamUtils.readLong(result.content)
-        logger?.debug(session.marker, "Response is a $classId")
+        val classId = StreamUtils.readInt(result.content)
+        logger?.debug("Response is a $classId")
         if (mtProtoContext.isSupportedObject(classId)) {
             val resultContent = mtProtoContext.deserializeMessage(result.content)
             if (resultContent is MTRpcError) {
-                logger?.error(session.marker,
-                             "rpcError ${resultContent.errorCode}: ${resultContent.message}")
+                logger?.error("rpcError ${resultContent.errorCode}: ${resultContent.message}")
                 subscriber?.onError(RpcErrorException(resultContent.errorCode,
                                                       resultContent.errorTag))
             } else
-                logger?.error(session.marker, "Unsupported content $result")
+                logger?.error("Unsupported content $result")
         } else {
             val response =
                     if (request != null)

@@ -108,8 +108,11 @@ object AuthKeyCreation {
      */
     @Throws(IOException::class)
     private fun <T : TLObject> executeMethod(method: TLMethod<T>): T {
+        println(method::class)
         val requestMessageId = TimeOverlord.generateMessageId(connection!!.dataCenter)
         val data = method.serialize()
+
+        println(data.size)
 
         // @see https://core.telegram.org/mtproto/description#unencrypted-message
         val out = ByteArrayOutputStream()
@@ -119,16 +122,14 @@ object AuthKeyCreation {
         StreamUtils.writeByteArray(data, out) // message_data
         val response = connection!!.executeMethod(out.toByteArray())
 
-        println("Generating stream")
         val inputStream = ByteArrayInputStream(response)
         val authId = StreamUtils.readLong(inputStream)
         if (authId == 0L) {
             @Suppress("UNUSED_VARIABLE")
             val messageId = StreamUtils.readLong(inputStream)
             val length = StreamUtils.readInt(inputStream)
-            println("Responsing")
             val messageResponse = StreamUtils.readBytes(length, inputStream)
-            println("Responsed")
+            println("Deserializing ${method::class}")
             return method.deserializeResponse(messageResponse, authContext)
         } else
             throw IOException("Auth id must be equal to zero")

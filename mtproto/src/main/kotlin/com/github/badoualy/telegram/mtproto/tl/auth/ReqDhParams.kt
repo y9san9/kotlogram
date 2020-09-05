@@ -54,6 +54,6 @@ class ReqDhParams @JvmOverloads constructor(var nonce: ByteArray = ByteArray(0),
 
     companion object {
         @JvmField
-        val CONSTRUCTOR_ID = 686627650L
+        val CONSTRUCTOR_ID = 0xd712e4beL
     }
 }

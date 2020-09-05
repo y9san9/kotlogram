@@ -50,11 +50,11 @@ public abstract class TLContext {
     protected abstract void init();
 
     public final boolean isSupportedObject(TLObject object) {
-        return isSupportedObject(object.getConstructorId());
+        return isSupportedObject((int)object.getConstructorId());
     }
 
-    public final boolean isSupportedObject(long constructorId) {
-        return registeredClasses.containsKey((int) constructorId);
+    public final boolean isSupportedObject(int constructorId) {
+        return registeredClasses.containsKey(constructorId);
     }
 
     public final <T extends TLObject> void registerClass(long constructorId, Class<T> clazz) {
@@ -66,7 +66,7 @@ public abstract class TLContext {
     }
 
     public final <T extends TLObject> T deserializeMessage(byte[] data, Class<T> clazz, long constructorId) throws IOException {
-        return deserializeMessage(new ByteArrayInputStream(data), clazz, constructorId);
+        return deserializeMessage(new ByteArrayInputStream(data), clazz, (int) constructorId);
     }
 
     public final TLObject deserializeMessage(InputStream stream) throws IOException {
@@ -84,8 +84,8 @@ public abstract class TLContext {
      * @throws IOException
      */
     @SuppressWarnings({"unchecked", "DuplicateThrows"})
-    public final <T extends TLObject> T deserializeMessage(InputStream stream, Class<T> clazz, long constructorId) throws DeserializationException, IOException {
-        long realConstructorId = StreamUtils.readInt(stream);
+    public final <T extends TLObject> T deserializeMessage(InputStream stream, Class<T> clazz, int constructorId) throws DeserializationException, IOException {
+        int realConstructorId = StreamUtils.readInt(stream);
         if (constructorId != -1 && realConstructorId != constructorId) {
             throw new InvalidConstructorIdException(realConstructorId, constructorId);
         } else if (constructorId == -1) {
@@ -107,7 +107,7 @@ public abstract class TLContext {
 
         try {
             if (clazz == null) {
-                clazz = registeredClasses.get((int) constructorId);
+                clazz = registeredClasses.get(constructorId);
                 if (clazz == null)
                     throw new UnsupportedConstructorException(constructorId);
             }

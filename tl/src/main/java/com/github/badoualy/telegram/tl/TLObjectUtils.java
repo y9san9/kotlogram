@@ -12,7 +12,7 @@ public final class TLObjectUtils {
     }
 
     public static int SIZE_INT32 = 4;
-    public static int SIZE_CONSTRUCTOR_ID = 16;
+    public static int SIZE_CONSTRUCTOR_ID = SIZE_INT32;
     public static int SIZE_BOOLEAN = SIZE_CONSTRUCTOR_ID;
     public static int SIZE_INT64 = 8;
     public static int SIZE_DOUBLE = 8;
