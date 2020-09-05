@@ -58,7 +58,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
 
     protected TLVector<TLAbsMessageEntity> entities;
 
-    protected Long scheduleDate;
+    protected Integer scheduleDate;
 
     private final String _constructor = "messages.sendMessage#fa88427a";
 
@@ -69,7 +69,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
             boolean noWebpage, boolean silent, boolean background,
             boolean clearDraft, TLAbsInputPeer peer, Integer replyToMsgId,
             String message, long randomId, TLAbsReplyMarkup replyMarkup,
-            TLVector<TLAbsMessageEntity> entities, Long scheduleDate) {
+            TLVector<TLAbsMessageEntity> entities, Integer scheduleDate) {
         this.noWebpage = noWebpage;
         this.silent = silent;
         this.background = background;
@@ -130,7 +130,7 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
             writeTLVector(entities, stream);
         }
         if ((flags & 1024) != 0) {
-            writeLong(scheduleDate, stream);
+            writeInt(scheduleDate, stream);
         }
     }
 
@@ -170,6 +170,9 @@ public class TLRequestMessagesSendMessage extends TLMethod<TLAbsUpdates> {
         if ((flags & 8) != 0) {
             if (entities == null) throwNullFieldException("entities", flags);
             size += entities.computeSerializedSize();
+        }
+        if((flags & 1024) != 0) {
+            size += SIZE_INT64;
         }
         return size;
     }
